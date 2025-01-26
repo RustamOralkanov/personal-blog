@@ -7,6 +7,7 @@ export class AuthController {
 
     @Post("login")
     async login(@Body() body: { email: string; password: string }) {
+        console.log(body);
         if (!body) {
             throw new HttpException({ message: "Email and password are required" }, 400);
         }
