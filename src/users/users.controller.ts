@@ -9,7 +9,6 @@ export class UsersController {
     @UseGuards(JwtAuthGuard)
     @Get()
     async getAllUsers() {
-        return { message: "This is a protected route" };
-        // return this.usersService.getAllUsers();
+        return this.usersService.getAllUsers();
     }
 }

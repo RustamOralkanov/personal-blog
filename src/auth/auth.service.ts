@@ -37,6 +37,7 @@ export class AuthService {
                 password: hashedPassword,
             },
         });
+
         return this.login(newUser); // После создания пользователя возвращаем токен
     }
 }
