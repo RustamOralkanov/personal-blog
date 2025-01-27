@@ -14,4 +14,17 @@ export class PostsService {
             },
         });
     }
+
+    async findAll() {
+        return this.prisma.post.findMany();
+    }
+
+    async findOne(id: number) {
+        return this.prisma.post.findUnique({
+            where: { id },
+            include: { author: true },
+        });
+    }
+
+    async updatePost() {}
 }
